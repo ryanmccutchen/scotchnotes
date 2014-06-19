@@ -1,0 +1,21 @@
+/*@media (min-width: @screen-sm-min) and (max-width: @screen-md-max) { */
+@media (min-width: 992px) {
+.jumbotron
+{
+	background: url(../images/jumboScotch.jpg) no-repeat right; 
+	width: 100%;
+	background-color: black;
+	color: white;
+	text-shadow: 3px 3px 0px #000;	
+}
+}
+@media (max-width: 992px) {
+.jumbotron
+{
+	background: url(../images/jumboScotchSM.jpg) no-repeat right; 
+	width: 100%;
+	background-color: black;
+	color: white;
+	text-shadow: 3px 3px 0px #000;	
+}
+}
