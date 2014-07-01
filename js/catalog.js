@@ -3,10 +3,20 @@
 	var CatalogViewModel = function (){
 		var self = this;
 
-		self.items = ko.observableArray([
-			{id:001, name:"Whisky 01", rating:3, brand:"Arbeg", description: "Fucking shit is good"}
 
-			]);
+		self.load = function(){
+			$.getJSON('js/catalog.json', null,function(results, textStatus, jqXHR){
+				$(results).each(function(){
+					self.items.push(this);
+				});
+			}).fail(function(one,two,three){
+				debugger;
+			});
+		};
+
+		self.items = ko.observableArray([]);
+
+		self.load();
 
 	}
 
