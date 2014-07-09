@@ -1,3 +1,29 @@
 /* COLOR PALETTE */
-@media (min-width: 992px){.jumbotron{ background:url(../images/jumboScotch.jpg) no-repeat right;width:100%;background-color:#000;color:#fff;text-shadow:3px 3px 0 #000}}@media (max-width: 992px){.jumbotron{ background:url(../images/jumboScotchSM.jpg) no-repeat right;width:100%;background-color:#000;color:#fff;text-shadow:3px 3px 0 #000}}
+/* COLOR PALETTE */
+/*@media (min-width: @screen-sm-min) and (max-width: @screen-md-max) { */
+@media (min-width: 992px) {
+  .jumbotron {
+    background: url(../images/jumboScotch.jpg) no-repeat right;
+    width: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    text-shadow: 3px 3px 0px #000;
+  }
+}
+@media (max-width: 992px) {
+  .jumbotron {
+    background: url(../images/jumboScotchSM.jpg) no-repeat right;
+    width: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    text-shadow: 3px 3px 0px #000;
+  }
+}
+.card {
+  display: inline-block;
+}
+.list {
+  display: block;
+}
+
 /* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */

@@ -10,7 +10,8 @@
 
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	 <link rel="stylesheet" type="text/css" href="css/web01.css">
+  <link rel="stylesheet" href="plugins/jqwidgets/styles/jqx.base.css" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="css/web01.css">
 	
 </head>
 <body>
@@ -37,12 +38,14 @@
     </div>
 
 
-	<div class="container">
+	<div class="container" id="catalog">
       <!-- Example row of columns -->
+      <select data-bind="value:style, options:styles">
+      </select>
       <div class="row">
 
       <ol id="cat-list" class="list-group" data-bind="foreach: items">
-        <li class="list-group-item">
+        <li class="list-group-item" data-bind="css:$parent.style">
           <div class="cat-list-short">
             <h1 data-bind="text: name"></h1>
             <p>Rating: <span data-bind="text: rating">3</span></p>
@@ -51,13 +54,21 @@
           <div>
         </li>
       </ol>
-        
       </div>
 
+      <div data-bind="jqxGrid: {source: items, autoheight: true,
+         columns: [
+            { text: 'Name', dataField: 'name', width: 200 },
+            { text: 'Rating', dataField: 'rating', width: 20 },
+            { text: 'Brand', dataField: 'brand', width: 200},
+            { text: 'Description', dataField: 'description', width: 400}
+        ]}">
+      </div> 
+
+    <div class="well" data-bind="visible:items().length == 0">
+      <p>No results.</p>
     </div>
 
-    <div class="well">
-      <p>This is a demo site for development testing .... for now.</p>
     </div>
 
 
@@ -68,5 +79,18 @@
     <script type="text/javascript" src="js/knockout-3.1.0.js"></script>
     <script type="text/javascript" src="js/sn01.js"></script>
     <script type="text/javascript" src="js/catalog.js"></script>
+
+    <!--jQWidgets PLugin -->
+    <script type="text/javascript" src="plugins/scripts/json2.js"></script> 
+    <script type="text/javascript" src="plugins/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="plugins/jqwidgets/jqxgrid.js"></script>
+    <script type="text/javascript" src="plugins/jqwidgets/jqxdata.js"></script>
+    <script type="text/javascript" src="plugins/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="plugins/jqwidgets/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="plugins/jqwidgets/jqxmenu.js"></script>
+    <script type="text/javascript" src="plugins/jqwidgets/jqxgrid.selection.js"></script>
+    <script type="text/javascript" src="plugins/jqwidgets/jqxgrid.edit.js"></script>
+    <script type="text/javascript" src="plugins/jqwidgets/jqxknockout.js"></script>
+    <script type="text/javascript" src="plugins/jqwidgets/jqxcheckbox.js"></script>
 </body>
 </html>

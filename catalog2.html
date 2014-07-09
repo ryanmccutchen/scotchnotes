@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Scotch Notes</title>
+
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="plugins/jqwidgets/styles/jqx.base.css" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="css/web01.css">
+	
+</head>
+<body>
+
+    <div class="container theme-showcase" role="main">
+
+    <div class="navbar navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Scotch Notes</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav" data-bind="foreach: navData">
+            <li class="active"><a data-bind="attr:{href: link, title: name}, text: name">Home</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+
+	<div class="container" id="catalog">
+      <!-- Example row of columns -->
+     
+      <div class="row">
+
+      <div id="jqxgrid"></div>
+
+    </div>
+
+
+    </div>
+
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script> 
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/knockout-3.1.0.js"></script>
+    <script type="text/javascript" src="js/sn01.js"></script>
+    <script type="text/javascript" src="js/catalog-grid.js"></script>
+
+    <!--jQWidgets PLugin -->
+    <script type="text/javascript" src="plugins/scripts/json2.js"></script> 
+    <script type="text/javascript" src="plugins/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="plugins/jqwidgets/jqxgrid.js"></script>
+    <script type="text/javascript" src="plugins/jqwidgets/jqxdata.js"></script>
+    <script type="text/javascript" src="plugins/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="plugins/jqwidgets/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="plugins/jqwidgets/jqxmenu.js"></script>
+    <script type="text/javascript" src="plugins/jqwidgets/jqxgrid.selection.js"></script>
+    <script type="text/javascript" src="plugins/jqwidgets/jqxgrid.edit.js"></script>
+    <script type="text/javascript" src="plugins/jqwidgets/jqxknockout.js"></script>
+    <script type="text/javascript" src="plugins/jqwidgets/jqxcheckbox.js"></script>
+</body>
+</html>

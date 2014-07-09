@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="plugins/jqwidgets/styles/jqx.base.css" type="text/css" />
+
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script> 
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/knockout-3.1.0.js"></script>
+    <script type="text/javascript" src="js/sn01.js"></script>
+    <script type="text/javascript" src="js/catalog.js"></script>
+    <script type="text/javascript" src="plugins/scripts/json2.js"></script> 
+    <script type="text/javascript" src="plugins/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="plugins/jqwidgets/jqxdata.js"></script>
+    <script type="text/javascript" src="plugins/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="plugins/jqwidgets/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="plugins/jqwidgets/jqxmenu.js"></script>
+    <script type="text/javascript" src="plugins/jqwidgets/jqxgrid.js"></script>
+    <script type="text/javascript" src="plugins/jqwidgets/jqxgrid.selection.js"></script>
+    <script type="text/javascript" src="plugins/jqwidgets/jqxgrid.edit.js"></script>
+    <script type="text/javascript" src="plugins/jqwidgets/jqxknockout.js"></script>
+    <script type="text/javascript" src="plugins/jqwidgets/jqxcheckbox.js"></script>
+    <script type="text/javascript" src="plugins/scripts/gettheme.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var initialData = [
+                { name: "Well-Travelled Kitten", sales: 352, price: 75.95 },
+                { name: "Speedy Coyote", sales: 89, price: 190.00 },
+                { name: "Furious Lizard", sales: 152, price: 25.00 },
+                { name: "Indifferent Monkey", sales: 1, price: 99.95 },
+                { name: "Brooding Dragon", sales: 0, price: 6350 },
+                { name: "Ingenious Tadpole", sales: 39450, price: 0.35 },
+                { name: "Optimistic Snail", sales: 420, price: 1.50 }
+            ];
+            var GridModel = function (items) {
+                this.items = ko.observableArray(items); 
+            };
+            ko.applyBindings(new GridModel(initialData));
+        });
+    </script>
+</head>
+<body class='default'>
+        <div data-bind="jqxGrid: {source: items, autoheight: true,
+                 columns: [
+                    { text: 'Name', dataField: 'name', width: 200 },
+                    { text: 'Sales', dataField: 'sales', width: 200, cellsalign: 'right' },
+                    { text: 'Price', dataField: 'price', width: 200, cellsformat: 'c2', cellsalign: 'right' }
+                ]}">
+        </div>  
+</body>
+</html>

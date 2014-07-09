@@ -1,16 +1,15 @@
 [
-	{	id:1, 
-		name:"Whisky 01", 
-		rating:3, 
-		brand:"Arbeg", 
-		description: "Fucking shit is good"
+	{	"id":1, 
+		"name":"Whisky 01", 
+		"rating":3, 
+		"brand":"Arbeg", 
+		"description": "Fucking shit is good"
 	},
 	{
-		id: 2,
-		name:"Whisky 02",
-		rating:2,
-		brand:"Talisker",
-		description: "This is really nice hooch"
+		"id": 2,
+		"name":"Whisky 02",
+		"rating":2,
+		"brand":"Talisker",
+		"description": "This is really nice hooch"
 	}
-
 ]

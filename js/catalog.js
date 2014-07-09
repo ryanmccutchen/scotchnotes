@@ -15,11 +15,12 @@
 		};
 
 		self.items = ko.observableArray([]);
-
+		self.style = ko.observable("card");
+		self.styles = ko.observableArray(["list","card"]);
 		self.load();
 
 	}
 
-	ko.applyBindings(new CatalogViewModel(), $('#cat-list')[0]);
+	ko.applyBindings(new CatalogViewModel(), $('#catalog')[0]);
 
 })();
